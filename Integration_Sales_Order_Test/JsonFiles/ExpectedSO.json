@@ -1,0 +1,56 @@
+{
+	"order": {
+		"orderRef": "TestSO123",
+		"orderDate": "2023/01/23",
+		"currency": "EUR",
+		"shipDate": "2023/01/23",
+		"categoryCode": "B2C",
+		"addresses": [
+					{
+						"addressType": "BY",
+						"locationNumber": 1234,
+						"contactName": "Test Name",
+						"lastName": "Test Last Name",
+						"companyName": "Test Company Name",
+						"addressLine1": "123 Address Line 1",
+						"addressCity": "City",
+						"addressState": "State",
+						"postcode": 12345,
+						"countryCode": "ZA",
+						"phoneNumber": "",
+						"emailAddress": ""
+					},
+					{
+						"addressType": "ST",
+						"locationNumber": 1234,
+						"contactName": "Test Name",
+						"lastName": "Test Last Name",
+						"companyName": "Test Company Name",
+						"addressLine1": "123 Address Line 1",
+						"addressCity": "City",
+						"addressState": "State",
+						"postcode": 12345,
+						"countryCode": "ZA",
+						"phoneNumber": "",
+						"emailAddress": ""
+					}
+				],
+		"lines": [
+					{
+						"sku": "TestSKU1",
+						"qty": 1,
+						"desc": "Test SKU 1"
+					},
+					{
+						"sku": "TestSKU2",
+						"qty": 4,
+						"desc": "Test SKU 2"
+					},
+					{
+						"sku": "TestSKU3",
+						"qty": 8,
+						"desc": "Test SKU 3"
+					}
+				]
+	}
+}

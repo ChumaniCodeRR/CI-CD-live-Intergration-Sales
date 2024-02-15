@@ -1,0 +1,54 @@
+{
+  "orderRef": "TestSO309",
+  "orderDate": "2023/01/19",
+  "currency": "RSA",
+  "shipDate": "2023/01/21",
+  "categoryCode": "B2CJDD",
+  "addresses": [
+    {
+      "addressType": "BY",
+      "locationNumber": 1234,
+      "contactName": "Test Name 1",
+      "lastName": "Test Last Name 23",
+      "companyName": "Test Company Name 34",
+      "addressLine1": "123 Address Line 1 43",
+      "addressCity": "City",
+      "addressState": "State",
+      "postcode": 12345,
+      "countryCode": "ZA",
+      "phoneNumber": "049594493",
+      "emailAddress": ""
+    },
+    {
+      "addressType": "ST",
+      "locationNumber": 1234,
+      "contactName": "Test Name",
+      "lastName": "Test Last Name",
+      "companyName": "Test Company Name",
+      "addressLine1": "123 Address Line 1",
+      "addressCity": "City",
+      "addressState": "State",
+      "postcode": 12345,
+      "countryCode": "ZA",
+      "phoneNumber": "",
+      "emailAddress": ""
+    }
+  ],
+  "lines": [
+    {
+      "sku": "TestSKU1 test test",
+      "qty": 3,
+      "desc": "Test SKU 100"
+    },
+    {
+      "sku": "TestSKU2 Test kimm",
+      "qty": 2,
+      "desc": "Test SKU 2"
+    },
+    {
+      "sku": "TestSKU3 Kimplow",
+      "qty": 3,
+      "desc": "Test SKU 3"
+    }
+  ]
+}

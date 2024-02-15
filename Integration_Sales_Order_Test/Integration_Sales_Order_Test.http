@@ -1,0 +1,6 @@
+@Integration_Sales_Order_Test_HostAddress = http://localhost:5121
+
+GET {{Integration_Sales_Order_Test_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

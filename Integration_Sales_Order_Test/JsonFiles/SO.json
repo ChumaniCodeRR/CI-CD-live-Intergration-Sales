@@ -1,0 +1,60 @@
+{
+	"SalesOrderRequest": {
+		"SalesOrder": {
+			"salesOrderRef": "TestSO309",
+			"orderDate": "2023/01/19",
+			"currency": "RSA",
+			"shipDate": "2023/01/21",
+			"categoryCode": "B2CJDD",
+			"addresses": [
+				{
+					"addressType": "BillTo",
+					"locationNumber": 1234,
+					"contactName": "Test Name",
+					"lastName": "Test Last Name 111",
+					"companyName": "Test Company Name111",
+					"addressLine1": "123 Address Line 1",
+					"city": "City",
+					"state": "State",
+					"postcode": 12345,
+					"countryCode": "ZA",
+					"phoneNumber": "",
+					"emailAddress": "",
+					"locationNumberQualifier": ""
+				},
+				{
+					"addressType": "ShipTo",
+					"locationNumber": 1234,
+					"contactName": "Test Name",
+					"lastName": "Test Last Name",
+					"companyName": "Test Company Name",
+					"addressLine1": "123 Address Line 1",
+					"city": "City",
+					"state": "State",
+					"postcode": 12345,
+					"countryCode": "ZA",
+					"phoneNumber": "",
+					"emailAddress": "",
+					"locationNumberQualifier": ""
+				}
+			],
+			"orderLines": [
+				{
+					"skuCode": "TestSKU1",
+					"quantity": 1,
+					"description": "Test SKU 1"
+				},
+				{
+					"skuCode": "TestSKU2",
+					"quantity": 4,
+					"description": "Test SKU 2"
+				},
+				{
+					"skuCode": "TestSKU3",
+					"quantity": 8,
+					"description": "Test SKU 2"
+				}
+			]
+		}
+	}
+}

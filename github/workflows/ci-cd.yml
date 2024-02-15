@@ -21,6 +21,6 @@ jobs:
         - name : Restore dependencies 
           run: dotnet restore
 
-        -name: Build app 
+        - name : Build app 
           run: dotnet build -c Release --no-restore 
 

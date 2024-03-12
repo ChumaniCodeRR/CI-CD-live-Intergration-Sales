@@ -70,6 +70,13 @@ namespace Integration_Sales_Order_Test.Controllers
             return Ok(new { message = "Registration successful, please check your email for verification instructions" });
         }
 
+        [HttpPost("userlogin")]
+        public IActionResult UserLogin (LoginRequest model)
+        {
+            _accountService.UserLogin(model);
+            return Ok(new { message = "Login successful, redirecting to page...." });
+        }
+
         [HttpPost("verify-email")]
         public IActionResult VerifyEmail(VerifyEmailRequest model)
         {

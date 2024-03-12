@@ -19,8 +19,8 @@ using static System.Net.WebRequestMethods;
 namespace Integration_Sales_Order_Test.Controllers
 {
 
-    [Route("api/SalesOrderController")]
     [ApiController]
+    [Route("[controller]")]
     public class SalesOrderController : ControllerBase
     {
         private readonly ISalesOrder _salesOrder;

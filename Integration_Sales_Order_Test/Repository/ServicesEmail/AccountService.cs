@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using System.Text;
 using Integration_Sales_Order_Test.Entities;
 using Integration_Sales_Order_Test.Model.Accounts;
+using Microsoft.AspNetCore.Identity;
 
 namespace Integration_Sales_Order_Test.Repository.ServicesEmail
 {
@@ -58,6 +59,32 @@ namespace Integration_Sales_Order_Test.Repository.ServicesEmail
             response.JwtToken = jwtToken;
             response.RefreshToken = refreshToken.Token;
             return response;
+
+        }
+
+        public void UserLogin(LoginRequest request)
+        {
+            var user = _context.Accounts.SingleOrDefault(x => x.Email == request.Email);
+
+            if (user == null)
+            {
+                throw new AppException("Email is not found !!!");
+            }
+
+            if (user == null || !user.IsVerified)
+            {
+                throw new AppException($"Unable to authenticate user {request.Email}");
+            }
+
+            var userinfo = _mapper.Map<UserLoginDetails>(request);
+
+            userinfo.Email = user.Email;
+            userinfo.LastName = user.LastName;
+            userinfo.Date = DateTime.UtcNow;
+            userinfo.SecurityStamp = randomTokenString();
+
+           _context.UserLoginDetails.Add(userinfo);
+            _context.SaveChanges();
 
         }
 
@@ -232,7 +259,7 @@ namespace Integration_Sales_Order_Test.Repository.ServicesEmail
 
             if (account == null) throw new AppException("Invalid token provided");
         }
-       
+
         private (RefreshToken, Account) getRefreshToken(string token)
         {
             var account = _context.Accounts.SingleOrDefault(u => u.RefreshTokens.Any(t => t.Token == token));

@@ -9,5 +9,13 @@ namespace Integration_Sales_Order_Test.Controllers
     {
         public Account Account => (Account)HttpContext.Items["Account"];
 
+        public Product Product => (Product)HttpContext.Items["Product"];
+
+        public Category Category => (Category)HttpContext.Items["Category"];
+
+        public Client Client => (Client)HttpContext.Items["Client"];
+
+        public ItemOrders ItemOrders => (ItemOrders)HttpContext.Items["ItemOrders"];
+
     }
 }

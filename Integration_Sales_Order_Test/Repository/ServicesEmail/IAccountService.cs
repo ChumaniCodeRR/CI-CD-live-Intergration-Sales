@@ -10,6 +10,8 @@ namespace Integration_Sales_Order_Test.Repository.ServicesEmail
 
         void RevokeToken(string token, string ipAddress);
         void Register(RegisterRequest model, string origin);
+        
+        void UserLogin (LoginRequest request);
         void VerifyEmail(string token);
         void ForgotPassword(ForgotPasswordRequest model, string origin);
         void ValidateResetToken(ValidateResetTokenRequest model);

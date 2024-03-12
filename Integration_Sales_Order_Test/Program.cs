@@ -11,10 +11,13 @@ using System;
 using Integration_Sales_Order_Test.Repository.ServicesEmail;
 using Integration_Sales_Order_Test.Middleware;
 using System.Data.Entity;
-using System.Configuration;
 using Integration_Sales_Order_Test.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Integration_Sales_Order_Test.Repository.ProductServices;
+using Integration_Sales_Order_Test.Repository.CategoryServices;
+using Integration_Sales_Order_Test.Repository.ClientServices;
+using Integration_Sales_Order_Test.Repository.Orders;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -38,6 +41,10 @@ builder.Services.Configure<AppSettings>(config.GetSection("AppSettings"));
 builder.Services.AddTransient<ISalesOrder, SalesOrderRepo>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IProductServices, ProductServices>();
+builder.Services.AddScoped<ICategory, CategoryServices>();
+builder.Services.AddScoped<IClientServices, ClientServices>();
+builder.Services.AddScoped<IOrders, OrderServices>();
 
 builder.Services.AddAuthentication(options =>
 {
